@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Questions</title>
+    <link rel="stylesheet" href="./libs/katex/katex.min.css">
+    <script src="./libs/katex/katex.min.js"></script>
+    <script>
+      console.log("window.MathJax 1", window.MathJax)
+    </script>
+    <script type="text/javascript">
+      // Mathjax conf
+      window.MathJax = {
+          tex2jax: {
+              inlineMath: [ ['$$','$$'] ],
+              displayMath:  [ ["\\(","\\)"] ]
+          },
+          messageStyle: "none",
+          MathMenu: { showRenderer: false },
+          'HTML-CSS': {
+            imageFont: null
+          }
+      }
+    </script>
+    <script src="./libs/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML&dummy=.js"></script>
+    <style type="text/css">
+      @font-face {
+        font-family: 'OpenSans';
+        src: url('file:///android_asset/fonts/OpenSans-Regular.ttf');
+      }
+      body {
+        font-family: 'OpenSans', Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='root'>
+    </div>
+    <script src="bundle.js"></script>
+    <script>
+        console.log("window.MathJax 4", window.MathJax)
+      </script>
+    <script>
+      window.onload = function () {
+        console.log("window.initExerciser", window.initExerciser)
+      }
+    </script>
+  </body>
+</html>
